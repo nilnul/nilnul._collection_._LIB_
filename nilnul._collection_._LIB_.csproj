@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>nilnul.collection</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="family_\ring_\singleton\" />
+    <Folder Include="nilnul0\collection_\continuum_\" />
+    <Folder Include="nilnul0\num\real\betwixt_\" />
+  </ItemGroup>
+
+</Project>

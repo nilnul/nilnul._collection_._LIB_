@@ -1,0 +1,1244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Deterministic>false</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{269D97D6-EB9E-4D19-9CBF-98D8FE057816}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>nilnul._collection_._LIB__</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbol|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>nilnul.collection</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.240820.180817\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.geometry._planar_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.geometry._planar_._LIB_.1.1.241028.155026\lib\net48\nilnul.geometry._planar_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.240824.151617\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.240820.161945\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.241108.143740\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._complex_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._complex_._LIB_.1.1.240820.174234\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.241104.100014\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.240820.181307\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.241108.142216\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.241022.52038\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.241106.132038\lib\net48\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._geometry_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._geometry_._LIB_.1.0.241105.52907\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.241108.145825\lib\net48\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.241104.93627\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.241108.133835\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.241108.130544\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.240831.105511\lib\net48\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.241107.13801\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.241106.132610\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.241107.73557\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\sergeyBochkanov._alglib_._LIB_.1.1.240820.162825\lib\net48\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.241016.32119\lib\net48\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.241016.32253\lib\net48\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\bak2306011714190374253" />
+    <None Include=".git\logs\refs\heads\bak2306041759587355978" />
+    <None Include=".git\logs\refs\heads\bak2306280403393574658" />
+    <None Include=".git\logs\refs\heads\bak2307272123437701414" />
+    <None Include=".git\logs\refs\heads\bak2405090612264847957-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405122328353830946-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405162319599212493-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405191832304494951-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405220727240483243-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405250016504610824-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405282335501220705-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2405311925129223105-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2406022010448483716-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2406060825390261697-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2406090011415182916-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2406120247366249705-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2406282238559850326-werk-o" />
+    <None Include=".git\logs\refs\heads\bak2408060002054350604-werk-clan" />
+    <None Include=".git\logs\refs\heads\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\heads\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\heads\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\heads\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405090612264847957-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405122328353830946-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405162319599212493-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405191832304494951-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405220727240483243-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405250016504610824-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405282335501220705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2405311925129223105-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2406022010448483716-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2406060825390261697-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2406090011415182916-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2406120247366249705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2406282238559850326-werk-o" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak2408060002054350604-werk-clan" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Amazon\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405090612264847957-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405122328353830946-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405162319599212493-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405191832304494951-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405220727240483243-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405250016504610824-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405282335501220705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2405311925129223105-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2406022010448483716-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2406060825390261697-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2406090011415182916-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2406120247366249705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2406282238559850326-werk-o" />
+    <None Include=".git\logs\refs\remotes\Azure\bak2408060002054350604-werk-clan" />
+    <None Include=".git\logs\refs\remotes\Azure\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Azure\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Azure\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Azure\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2306202224340674788r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2306202224340674788r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2306202224340674788r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2306202224340674788r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2306280402161089203r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2306280402161089203r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2306280402161089203r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2306280402161089203r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2307092206537937273r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2307272121003891271r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2308011554112358751r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2308082144188899070r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2308152234422441540r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2308182036441572285r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2309052341003186923r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2309122115187065129r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2309200138020694206r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2310081625335358312r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2310180245239516914r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2310230617142267877r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2311020054155602005r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2311051519252104987r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2311150046224045844r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2311181830225644783r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2312060059185698583r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2312071808101723278r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2312150255195688218r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github1L2312291538258503940r\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Github\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Github\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Github\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Github\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405090612264847957-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405122328353830946-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405162319599212493-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405191832304494951-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405220727240483243-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405250016504610824-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405282335501220705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2405311925129223105-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2406022010448483716-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2406060825390261697-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2406090011415182916-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2406120247366249705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2406282238559850326-werk-o" />
+    <None Include=".git\logs\refs\remotes\Github\bak2408060002054350604-werk-clan" />
+    <None Include=".git\logs\refs\remotes\Github\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Github\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Github\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Github\bak_snap2307272124222000290" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2306011714190374253" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2306041759587355978" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2306280403393574658" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2307272123437701414" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405090612264847957-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405122328353830946-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405162319599212493-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405191832304494951-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405220727240483243-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405250016504610824-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405282335501220705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2405311925129223105-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2406022010448483716-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2406060825390261697-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2406090011415182916-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2406120247366249705-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2406282238559850326-werk-o" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak2408060002054350604-werk-clan" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak_snap2306011714257210622" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak_snap2306041800084610699" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak_snap2306280404138666197" />
+    <None Include=".git\logs\refs\remotes\Gitlab\bak_snap2307272124222000290" />
+    <None Include=".git\objects\01\bb81b7900712a08d05e0857ffbe9763f302b6b" />
+    <None Include=".git\objects\02\106b4249a817ad678d1ddd2f1ef5521a2468a5" />
+    <None Include=".git\objects\03\0de49145d1096e156a9dab9b8359d5c188d58e" />
+    <None Include=".git\objects\04\63d06c13c712ebb12d7f755b853761c1e07150" />
+    <None Include=".git\objects\05\bd2f503ec9dab396a05cd7578e2500b012c914" />
+    <None Include=".git\objects\06\365c8b87de0e3ad529f91a50c4e67c28a68634" />
+    <None Include=".git\objects\07\692970a2552ed7b1d3158babce07add39681fd" />
+    <None Include=".git\objects\0b\941604d45ddc4bad951abeecf0a4a81cd86366" />
+    <None Include=".git\objects\0b\b1734b58778cb4431c9a05cfcf70ddecd383f7" />
+    <None Include=".git\objects\0c\8188e500c7e781d7ac80c6aeb9b7162efc0753" />
+    <None Include=".git\objects\0c\97f07b093782336645d59f61b04dd8e1be82d1" />
+    <None Include=".git\objects\0c\fb7a2056b8ad9f415bca34826f1fd84e7909ac" />
+    <None Include=".git\objects\0f\fa004ddd5d714af1bf5dc4b5803648c3ebd81b" />
+    <None Include=".git\objects\10\d14b53fb3ec1929b1b894220dd64e559ac2adf" />
+    <None Include=".git\objects\11\2574e586c94954247184acd5540455544c558c" />
+    <None Include=".git\objects\11\ed2b6d05838f43262ae60710ab64cba58315a0" />
+    <None Include=".git\objects\13\002eae244962477c08423ed37722bf038fe7c3" />
+    <None Include=".git\objects\13\7ab20fa0d615d74f4e3da1e3ef6d0fe84959c5" />
+    <None Include=".git\objects\16\b5cd2922f9824b12a18a429836cc3fc4064892" />
+    <None Include=".git\objects\17\180978391595bd7fa8a5bd26b5a89bde40a0dd" />
+    <None Include=".git\objects\17\7ce2d5489030ee1bb6c7c57a9320ffa1f40713" />
+    <None Include=".git\objects\1a\eee82d2f14fdce24d6f7ad9d526c50f4fab388" />
+    <None Include=".git\objects\1b\5126dd38f2bd447313ddedfee1fbf241db3d20" />
+    <None Include=".git\objects\1c\b76b0d4da20e66a056e79734b3729a5eef9eb5" />
+    <None Include=".git\objects\1c\c62ef33ff3215b8ffb6434d69cb61cedd0a146" />
+    <None Include=".git\objects\1d\c570b675a124d4474e01c6782aef8521d3a758" />
+    <None Include=".git\objects\1d\f14988e09a7fe6c1e3d13068cbb8f1a8dd91c9" />
+    <None Include=".git\objects\1e\9d4fb3061d6a9a1e332373875048590a3064ed" />
+    <None Include=".git\objects\20\71a1b2af1c8a32675c8cc2d9b45e6c4c1e1dc0" />
+    <None Include=".git\objects\20\82ea132ab250f781019e22dc1842189c9eeaf2" />
+    <None Include=".git\objects\21\792c9a195bde4092956c57f00c69badcb5aa8b" />
+    <None Include=".git\objects\21\9a3532c19a1ee92933e8be204a504f0a59a495" />
+    <None Include=".git\objects\25\004750d7d58485f5832079f3f735b1de4ebdb2" />
+    <None Include=".git\objects\26\392a234430db47bdfa3121416b16066f493286" />
+    <None Include=".git\objects\27\46c098aab69ac8846c3ed63e0c95ab9f982d54" />
+    <None Include=".git\objects\27\571d2ad26059905ada15f002d84036fb659619" />
+    <None Include=".git\objects\27\be4ea13441cbb04f9ac5ceb99159f34a4d8683" />
+    <None Include=".git\objects\28\9831586aa68fd622ff3b2afe0873ebe9f089bf" />
+    <None Include=".git\objects\28\abaece127307f3dcc87f5102c3cbc1569b05f8" />
+    <None Include=".git\objects\28\f21d110ce1946a2aee2eba28b281975d1d62a9" />
+    <None Include=".git\objects\29\6aa08648bb1dc4cf90561b9dbf56633043aa09" />
+    <None Include=".git\objects\29\728020fc7048fb0940fe20045edd20c5d67cc0" />
+    <None Include=".git\objects\2c\4a9007f62d8848dfc5620a5ab16218dad8ab2f" />
+    <None Include=".git\objects\2d\7f5670a3d3e39292d68edd6e02e243a8bf2e58" />
+    <None Include=".git\objects\2d\fdf49430120dd4ff97558652a9b1ea14b381b5" />
+    <None Include=".git\objects\2f\02a45328ff9c877cd13b4ec6a4bf30ac6ad189" />
+    <None Include=".git\objects\2f\3c2e187edd426798b5c80088bba8a67fcae957" />
+    <None Include=".git\objects\2f\8ac4e2873ccd9d20e07e5f5e4d6167115b8b71" />
+    <None Include=".git\objects\30\a3015d081c11d378691a1bd67f4d0dd21ca09d" />
+    <None Include=".git\objects\32\56e26647fa514e5d2af8bb107f2106e1cbee52" />
+    <None Include=".git\objects\33\d973d742fb0ca1a2097b9e28cfd2d755c8d364" />
+    <None Include=".git\objects\35\63b63813a78713bcab045817ab43ac1e421f6b" />
+    <None Include=".git\objects\37\79981387c3c5bf7afb54eb4f93394258976e0f" />
+    <None Include=".git\objects\3b\8d4b61a708e1ec634c3c37d1db6b455f28dc87" />
+    <None Include=".git\objects\3d\b883feedf032027dd3e00d41de0746070e29c5" />
+    <None Include=".git\objects\3f\4edd91766abc2bdbbd791a71c29bf2fa8b5280" />
+    <None Include=".git\objects\3f\6b044bc92135133ff16c733633246bce2a3098" />
+    <None Include=".git\objects\40\cd10dfdd3d04cd6542459311d8f02effd68efb" />
+    <None Include=".git\objects\43\023d2012eb87e5e9e443803a15afcbd3760516" />
+    <None Include=".git\objects\44\629f2c5ae1b8c7e8dbfa0953fd7401a30cbcf9" />
+    <None Include=".git\objects\44\84d4a0f496d382e326ab6661f58532523c0b23" />
+    <None Include=".git\objects\45\fd52844b3d19b50c8259dcf34f69ac0522dc58" />
+    <None Include=".git\objects\46\f6a6eb2a068dc072464d494a334983fcb4a107" />
+    <None Include=".git\objects\48\1046add3c91c1c0b47a1628b42ec992e6b4ed4" />
+    <None Include=".git\objects\4a\7e66224dcf53bed71eb6190cf77a9627733d3f" />
+    <None Include=".git\objects\4b\2dedadebdd265fa40940e1213c8abbfecdc73a" />
+    <None Include=".git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904" />
+    <None Include=".git\objects\4c\ee6435a881021df8577486822ca66152af970b" />
+    <None Include=".git\objects\4d\9ac972233a07016c7e3d12ede5ada6c86b07df" />
+    <None Include=".git\objects\54\7fb98ce459bfc89f0f5c9b711421da188456cc" />
+    <None Include=".git\objects\55\559927874a6307a1de75c8988f577770baccf0" />
+    <None Include=".git\objects\55\c4cd4396e0dc1d36911d7271b5b9b36a553086" />
+    <None Include=".git\objects\59\7e137173cb31c56a5110be91c9464754ea0e60" />
+    <None Include=".git\objects\59\94387f5b79da928b28f7515af372ad10554a4d" />
+    <None Include=".git\objects\59\be914aebf375a2b79f3d48c3ad990cd4960815" />
+    <None Include=".git\objects\5a\571117ca5a174c50619627e010ee06d76bac1d" />
+    <None Include=".git\objects\5a\ac243685f5c5738b7a00d4f2b55690f8a590fd" />
+    <None Include=".git\objects\5b\0e2ef6c3e9ea881e52e592069ca6ec3b316f57" />
+    <None Include=".git\objects\5c\39e5a26e6aa56cea5675418c733624ad81b0e3" />
+    <None Include=".git\objects\5c\3b44548d2ff793f168898d470c6c6d09ad72d6" />
+    <None Include=".git\objects\5c\cebbf3e7cc39af6c98607c1321ef81163dc492" />
+    <None Include=".git\objects\5d\cc9c919f33b797db899ac4ef801f1389299941" />
+    <None Include=".git\objects\5f\85b3631c09a3327070738101b4683cb97bd195" />
+    <None Include=".git\objects\61\63f70dc19989e60f68f90af59327c4cb7a3c44" />
+    <None Include=".git\objects\62\36f33f1c241980691ac80cef676c62cb0e1e7e" />
+    <None Include=".git\objects\64\bcba5319d202f54216f3753eee817ecdff6992" />
+    <None Include=".git\objects\66\12c2dbd2ebf9237ca5b3959fc2c98a6b05f418" />
+    <None Include=".git\objects\66\a167a7a186ffb08d6c3b0dfeaf6efffc6e3b4e" />
+    <None Include=".git\objects\67\4d10966b2ca58c3307294f04195a819655bd03" />
+    <None Include=".git\objects\67\fa624e55869b408caec328d96f3914b8a1f424" />
+    <None Include=".git\objects\68\73103ab9da958c423d498287c113561bf318b1" />
+    <None Include=".git\objects\6a\cdee817de7ea94faebc01a0cc918a985360ab5" />
+    <None Include=".git\objects\6b\99181d5f16bb3c309f29a6f51c7794b87d15d1" />
+    <None Include=".git\objects\6b\9cdb38b4c763ff5cd1b55abaf57efd83d15507" />
+    <None Include=".git\objects\6c\e4d20c84ec98be82a4dca66c3ac3f9592ceac6" />
+    <None Include=".git\objects\6d\34f38a557eea2c291b03bf913d8b32dbe63c51" />
+    <None Include=".git\objects\6e\038960d516b0e822ce5372c1e43df648837621" />
+    <None Include=".git\objects\6e\7c967acf41a9ff03909bc13ce8e9821b84e142" />
+    <None Include=".git\objects\6e\884c5ac914ec8e9f67282d1edb1d284520b70b" />
+    <None Include=".git\objects\6f\53c2f3bffa419992ce1c1304494d1fe0da5c36" />
+    <None Include=".git\objects\70\4dd342aa8f4f8693287c02405c6b47fb3834a7" />
+    <None Include=".git\objects\70\8ecd09813e329833ed121f75623d759017899f" />
+    <None Include=".git\objects\72\089690e5657e31804041aa4967a619ecb9b2a9" />
+    <None Include=".git\objects\72\73de5cf4b42cfcfc64541cbe2d2cea2e47a6b3" />
+    <None Include=".git\objects\73\387051728778f31d966b4997bf40024f243ddc" />
+    <None Include=".git\objects\76\666e3bf9d18602ebde95a917a4ba5494ab77d4" />
+    <None Include=".git\objects\76\c0ffef5d366c352319796ad4aea9428b628a2a" />
+    <None Include=".git\objects\79\28dd7a595a391d4c0454c438d9f0d016443afe" />
+    <None Include=".git\objects\79\fe48d7344899be9af05796e010e62e368354dd" />
+    <None Include=".git\objects\7b\60d172fdac9b2be5b744f4be5a959e77021600" />
+    <None Include=".git\objects\7c\473db1e9d555b0172bb58edd56eae091fad73f" />
+    <None Include=".git\objects\80\d0cb82407f465bffe113dce1b32c13143aba5e" />
+    <None Include=".git\objects\81\4e1cbc0306bc4658022f88aed26a8390fcf0ff" />
+    <None Include=".git\objects\81\feb209cbf5dce07a1bd2577dbc4961087bb676" />
+    <None Include=".git\objects\84\4a5e39351d20ae32a732e18908f1c354d4d8c0" />
+    <None Include=".git\objects\84\9cdd91c36178e7bd2e91478cba872b39508dff" />
+    <None Include=".git\objects\85\f2f5d1dc55c0d1c6eb0008b2023005c640d855" />
+    <None Include=".git\objects\86\ef710b601ef9cf9c472d560887756f30fef488" />
+    <None Include=".git\objects\86\f11cedaafeefdf5c85a8abad78406e6d0705bc" />
+    <None Include=".git\objects\87\944ebc1ab843a07274ffe9eeecea8a69e877e6" />
+    <None Include=".git\objects\88\1a7b266017852816ea2f1cc6acaa9076546a5a" />
+    <None Include=".git\objects\88\250d9de41a8d8679deed9b3b22858ec8972da7" />
+    <None Include=".git\objects\88\297495f92fb8a07ebea7fb6390df184273cb4e" />
+    <None Include=".git\objects\89\3941c77680294c1af0b5c371f83b9524b4fafb" />
+    <None Include=".git\objects\8b\384e77993580f268e4c9cf7d7ae1578ce4a062" />
+    <None Include=".git\objects\8c\4c88866656819fa6cb5f2157585d3c9bc3dbe2" />
+    <None Include=".git\objects\8c\65f24e1e397a28c9d2fc7fe0cf904f94fa287f" />
+    <None Include=".git\objects\8e\c4a3c1f0c993698f347f96b1aa172760c1e54c" />
+    <None Include=".git\objects\8f\13051ac265a5eb90264001393beb85e62b520a" />
+    <None Include=".git\objects\8f\81ee323ff4e077b3aaee5b10607e2187a4a098" />
+    <None Include=".git\objects\8f\cd75235a8f6384af8811602738bd1393617a12" />
+    <None Include=".git\objects\93\30a758835d5da8b7cf72b98645f2c8086f7463" />
+    <None Include=".git\objects\96\2bba1966ded9a7221c9c2823c0ca8beeeb38ff" />
+    <None Include=".git\objects\96\6ff5a17d5a8ffb1e702ee71a14b1d06a51b55e" />
+    <None Include=".git\objects\97\625da26015acff86d9e185e9d54aa29a789c79" />
+    <None Include=".git\objects\98\1df59b7e46905b5a3129549f19b3ec566a9447" />
+    <None Include=".git\objects\99\cfdaf9d661c02145b0aa1bdfb001d1da7f762c" />
+    <None Include=".git\objects\99\fe29de931dc7363aeccf0d6d2a77f5760fa102" />
+    <None Include=".git\objects\9c\b28b217c42c34369ce9c27de64c7fb20eb0fa2" />
+    <None Include=".git\objects\9d\9950f87a92f067cfb998828b9a5014743eebc5" />
+    <None Include=".git\objects\9e\90fa451a6a55f791e67c0686a7f099e485a92a" />
+    <None Include=".git\objects\a2\082df2b9462806d3c2e71425e2ba6f43d45770" />
+    <None Include=".git\objects\a2\197fe4f1fbbd24c37db0dedc3b88f77c152c99" />
+    <None Include=".git\objects\a2\4e6fe7d7ad6494c73c5f07e9fa8020dc44d2db" />
+    <None Include=".git\objects\a2\689ff56607ad9abeadb163122f9d4a1820eb4f" />
+    <None Include=".git\objects\a3\079e3ae8d667a9d10e0adc8cc33fe6718b252e" />
+    <None Include=".git\objects\a3\66021998e802b53aaadb1a0b3d6340c102ecfe" />
+    <None Include=".git\objects\a3\aea629dbc4e70277a84653cfdd45242b82684b" />
+    <None Include=".git\objects\a5\9820b571959902a73424e48b27fc87be9f4bb3" />
+    <None Include=".git\objects\a6\271eccf67ee80bdd50372796fee3836bbfcfa7" />
+    <None Include=".git\objects\a9\5d01b846606ba7ac7b4c6a84439cd9ebb63d17" />
+    <None Include=".git\objects\ab\42f5278d496aa1b48eb9553ccb381374fb6c8a" />
+    <None Include=".git\objects\ab\945c6a86e3a1e8020ebfcfdebd8a05fa3d5b5e" />
+    <None Include=".git\objects\ac\b1187763cde3bc62a249008a4b7ebad8fbd078" />
+    <None Include=".git\objects\ac\babad230cb84434d2c842c5616fbd30053e093" />
+    <None Include=".git\objects\ae\2a34863d8c1d15634c2346171c959b7a2e9f0f" />
+    <None Include=".git\objects\ae\b0b71b951f706f6ce776ccb61c2b403a7c5953" />
+    <None Include=".git\objects\af\0beb80e923eacf46303a5a9c7ca8933481aac3" />
+    <None Include=".git\objects\af\68898871f4276a7c0f2dbb8a5829c1417121b2" />
+    <None Include=".git\objects\b0\3a308e76aa08b97291b10e8039826e57aa0567" />
+    <None Include=".git\objects\b0\3b5b44831f84794583e557f5f6e27d8e940784" />
+    <None Include=".git\objects\b1\69522a2ac6ec9308cd22751fb367bc9db1d861" />
+    <None Include=".git\objects\b1\fb3cd823485ffe559572928f84617aada3defa" />
+    <None Include=".git\objects\b6\62e52fc2a7efab401ba05a192f94ad1b9a1c9a" />
+    <None Include=".git\objects\b7\682b909c370b8feeb9f62d554bad6a3205c094" />
+    <None Include=".git\objects\b8\a49c2f8dd49c67ae0386cb0acb343b7497b940" />
+    <None Include=".git\objects\ba\cd7316c237d2daf8117b88fc876e3fa66db85c" />
+    <None Include=".git\objects\ba\ffeeef3ca5ac8edfadba5fe25ccf596859fac2" />
+    <None Include=".git\objects\bb\dd1ad7e9b1786fe9765b08929c5e94da8ad0d8" />
+    <None Include=".git\objects\bc\520f1e6cfb63cbbc7f106fa03790a588db07c2" />
+    <None Include=".git\objects\bc\d23f5f69c08fbd7dd6f710e9bef4bc4e3bac12" />
+    <None Include=".git\objects\bd\8db4e9a5838cd90cceef45c2a3f148a5c46044" />
+    <None Include=".git\objects\c0\17074d47e5d4d02d5bf85130c3c19c326102a1" />
+    <None Include=".git\objects\c2\d6a8627507b63af9552b5ab4163cedd9c6691c" />
+    <None Include=".git\objects\c3\4e4b792699795be1c706c491d0f5e6d5613276" />
+    <None Include=".git\objects\c6\61e6e1c7a05df2a01f16ca081081f8276e4050" />
+    <None Include=".git\objects\c7\1cd2f007917f0b6306c03b1f98081e83076331" />
+    <None Include=".git\objects\c7\56a8e014f9a205bd64a298ea0e33222a3605d6" />
+    <None Include=".git\objects\c7\62d3293a4e5eb61b7ba6161f12073d22dbd44d" />
+    <None Include=".git\objects\c8\e8bd0e92fff9c0b3c33f9c895fda364f74da95" />
+    <None Include=".git\objects\c9\703391eea7f3b38979e9452d3124db68db4974" />
+    <None Include=".git\objects\ca\0b0b246128b46a9a3167360c2ae4051172f78a" />
+    <None Include=".git\objects\cb\e809bf9ee987c6a14cc7ceaf7f54ece962fecd" />
+    <None Include=".git\objects\cc\483265842fb7202baff8b4bfb100f30f40416b" />
+    <None Include=".git\objects\cd\a193c5402ce68a69bc2c14480f4907cee3ca06" />
+    <None Include=".git\objects\d0\680dfb631dd1f90656df5067e80afa6f310b6f" />
+    <None Include=".git\objects\d0\6f435b3c676c9999115ba50b90e0f52f66a1a6" />
+    <None Include=".git\objects\d0\b1d4c48d4285521fb32aaf6505dacc0ba81e67" />
+    <None Include=".git\objects\d1\30e6a795a2049366041395639da624da7bcc71" />
+    <None Include=".git\objects\d2\ca6325b5413581c28e3b8b906beede6fc69b66" />
+    <None Include=".git\objects\d3\1ca50090a3535f2f804abcd5cc8ac0e4c206e6" />
+    <None Include=".git\objects\d4\aa8541561278121bf99e7e25bc6fb7061e2f36" />
+    <None Include=".git\objects\d5\1d6edad7f8779c0d2c05e1f733ff8448c4a3b9" />
+    <None Include=".git\objects\d5\3bceed3befa305ccc86fb9c85ba25143c6a571" />
+    <None Include=".git\objects\d6\486987917875786dee0bdfa60c4b524b0d16fe" />
+    <None Include=".git\objects\d9\05c8c5d25d4fe535e8af3dc39cec64f4d42464" />
+    <None Include=".git\objects\da\e0f4b757ba994b193884bf716a4d0206cf088e" />
+    <None Include=".git\objects\db\7a053e0c9e55dd9d099932ad859a574db9a94e" />
+    <None Include=".git\objects\db\9547e65ffcee00ff6a8081bda37be31b4ba74b" />
+    <None Include=".git\objects\dd\19523a868a4bec1dd846516e9d296cc4fe1098" />
+    <None Include=".git\objects\dd\fc43a64d82389ef1fd76c8856ef1dd5dea97dc" />
+    <None Include=".git\objects\de\ab63f23bc7e4994275263c3558c37c4181e905" />
+    <None Include=".git\objects\df\4c2a8e3fb980a7188f499453ca877ba133b868" />
+    <None Include=".git\objects\e3\28a2dadc3d45c13447be4ce2e4d9cdc6be359d" />
+    <None Include=".git\objects\e3\c3a22e1fadbc0f584a2fe8365b046a2c589f0f" />
+    <None Include=".git\objects\e4\98773b0a5e1190846d6b76b76dd580101653af" />
+    <None Include=".git\objects\e5\809ede531bbd61fa107b3c5219cee16710f3ff" />
+    <None Include=".git\objects\e9\4bffc7666fdb16be06a775268ff788b44c608d" />
+    <None Include=".git\objects\ea\2822b2fb6d57faff0543132ef87642628b7741" />
+    <None Include=".git\objects\ea\31615e279831e459386eb84dc7cfd4d5e11206" />
+    <None Include=".git\objects\ea\b5d802cefe8e848464c9e696d6c47c43d6e335" />
+    <None Include=".git\objects\eb\6423985f53757dca987a7a52ecaf0f9d3eefdf" />
+    <None Include=".git\objects\f0\fb8ed1de21e977ac2b58fe0511c4139cbc7293" />
+    <None Include=".git\objects\f1\8dc854a99e56d943f000971b88ac25367f381b" />
+    <None Include=".git\objects\f1\c99128121c3eae61f762f4899e50286249409e" />
+    <None Include=".git\objects\f2\ab8132df50f466508584d392408b5a059f6d7f" />
+    <None Include=".git\objects\f3\ea17955d53694a88f6513a35559bbab4628606" />
+    <None Include=".git\objects\f4\ceed6318d2b710c762e6a491d1e27308658489" />
+    <None Include=".git\objects\f7\5e3a501870d923ab3cc3dafe2121d0b80c87f1" />
+    <None Include=".git\objects\f7\85105f6e26988fec2740f0968cddccc5db9891" />
+    <None Include=".git\objects\f8\79faa8edeb1b73e79d4c7abd5f98f87d6ed654" />
+    <None Include=".git\objects\f8\927e3b75ec5794604aec6e4f3a15c08c768ce5" />
+    <None Include=".git\objects\f9\acfa6a8fed37f817c0e18ac4e376603e0f007b" />
+    <None Include=".git\objects\fa\80369d554be27c277b1a15b75615377cec47d1" />
+    <None Include=".git\objects\fa\b9c61350179442fd98ca91aea980e01359615e" />
+    <None Include=".git\objects\fa\fb2c90133a469baf42f516705688323342328a" />
+    <None Include=".git\objects\fa\fbdcf32a5eca6285f17fe44d0a0ba3d86a29bf" />
+    <None Include=".git\objects\fb\6cd8cba211766b651b4fcf97f447066a80b601" />
+    <None Include=".git\objects\fb\de5b5449982557897551d3965dad50dc21188e" />
+    <None Include=".git\objects\fb\f68cdb921b25b77a330e657508cc17f8fdd4d3" />
+    <None Include=".git\objects\fc\ce3dfb4a69017e67f85abc7335ccd138a6c172" />
+    <None Include=".git\objects\fe\ff727f4e2aa14313c48671abc3bc219dfff333" />
+    <None Include=".git\objects\ff\0d55d1b1e16c100576bc4740d886b22925c277" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\bak2306011714190374253" />
+    <None Include=".git\refs\heads\bak2306041759587355978" />
+    <None Include=".git\refs\heads\bak2306280403393574658" />
+    <None Include=".git\refs\heads\bak2307272123437701414" />
+    <None Include=".git\refs\heads\bak2405090612264847957-werk-o" />
+    <None Include=".git\refs\heads\bak2405122328353830946-werk-o" />
+    <None Include=".git\refs\heads\bak2405162319599212493-werk-o" />
+    <None Include=".git\refs\heads\bak2405191832304494951-werk-o" />
+    <None Include=".git\refs\heads\bak2405220727240483243-werk-o" />
+    <None Include=".git\refs\heads\bak2405250016504610824-werk-o" />
+    <None Include=".git\refs\heads\bak2405282335501220705-werk-o" />
+    <None Include=".git\refs\heads\bak2405311925129223105-werk-o" />
+    <None Include=".git\refs\heads\bak2406022010448483716-werk-o" />
+    <None Include=".git\refs\heads\bak2406060825390261697-werk-o" />
+    <None Include=".git\refs\heads\bak2406090011415182916-werk-o" />
+    <None Include=".git\refs\heads\bak2406120247366249705-werk-o" />
+    <None Include=".git\refs\heads\bak2406282238559850326-werk-o" />
+    <None Include=".git\refs\heads\bak2408060002054350604-werk-clan" />
+    <None Include=".git\refs\heads\bak_snap2306011714257210622" />
+    <None Include=".git\refs\heads\bak_snap2306041800084610699" />
+    <None Include=".git\refs\heads\bak_snap2306280404138666197" />
+    <None Include=".git\refs\heads\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Amazon\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Amazon\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Amazon\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Amazon\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Amazon\bak2405090612264847957-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405122328353830946-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405162319599212493-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405191832304494951-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405220727240483243-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405250016504610824-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405282335501220705-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2405311925129223105-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2406022010448483716-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2406060825390261697-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2406090011415182916-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2406120247366249705-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2406282238559850326-werk-o" />
+    <None Include=".git\refs\remotes\Amazon\bak2408060002054350604-werk-clan" />
+    <None Include=".git\refs\remotes\Amazon\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Amazon\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Amazon\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Amazon\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Azure\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Azure\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Azure\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Azure\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Azure\bak2405090612264847957-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405122328353830946-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405162319599212493-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405191832304494951-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405220727240483243-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405250016504610824-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405282335501220705-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2405311925129223105-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2406022010448483716-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2406060825390261697-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2406090011415182916-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2406120247366249705-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2406282238559850326-werk-o" />
+    <None Include=".git\refs\remotes\Azure\bak2408060002054350604-werk-clan" />
+    <None Include=".git\refs\remotes\Azure\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Azure\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Azure\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Azure\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2306202224340674788r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2306202224340674788r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2306202224340674788r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2306202224340674788r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2306280402161089203r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2306280402161089203r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2306280402161089203r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2306280402161089203r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2307092206537937273r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2307272121003891271r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2308011554112358751r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2308082144188899070r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2308152234422441540r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2308182036441572285r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2309052341003186923r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2309122115187065129r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2309200138020694206r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2310081625335358312r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2310180245239516914r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2310230617142267877r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2311020054155602005r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2311051519252104987r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2311150046224045844r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2311181830225644783r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2312060059185698583r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2312071808101723278r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2312150255195688218r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github1L2312291538258503940r\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Github\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Github\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Github\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Github\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Github\bak2405090612264847957-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405122328353830946-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405162319599212493-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405191832304494951-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405220727240483243-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405250016504610824-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405282335501220705-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2405311925129223105-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2406022010448483716-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2406060825390261697-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2406090011415182916-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2406120247366249705-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2406282238559850326-werk-o" />
+    <None Include=".git\refs\remotes\Github\bak2408060002054350604-werk-clan" />
+    <None Include=".git\refs\remotes\Github\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Github\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Github\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Github\bak_snap2307272124222000290" />
+    <None Include=".git\refs\remotes\Gitlab\bak2306011714190374253" />
+    <None Include=".git\refs\remotes\Gitlab\bak2306041759587355978" />
+    <None Include=".git\refs\remotes\Gitlab\bak2306280403393574658" />
+    <None Include=".git\refs\remotes\Gitlab\bak2307272123437701414" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405090612264847957-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405122328353830946-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405162319599212493-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405191832304494951-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405220727240483243-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405250016504610824-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405282335501220705-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2405311925129223105-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2406022010448483716-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2406060825390261697-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2406090011415182916-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2406120247366249705-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2406282238559850326-werk-o" />
+    <None Include=".git\refs\remotes\Gitlab\bak2408060002054350604-werk-clan" />
+    <None Include=".git\refs\remotes\Gitlab\bak_snap2306011714257210622" />
+    <None Include=".git\refs\remotes\Gitlab\bak_snap2306041800084610699" />
+    <None Include=".git\refs\remotes\Gitlab\bak_snap2306280404138666197" />
+    <None Include=".git\refs\remotes\Gitlab\bak_snap2307272124222000290" />
+    <None Include=".git\refs\tags\bak2312150256172745637-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2312150256172745637-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2312240058174243563-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2312240058174243563-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2312291539177775836-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2312291539177775836-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2401170146461788718-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2401170146461788718-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2401272110368612127-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2401272110368612127-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2405090612264847957-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2405090612264847957-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2405122328353830946-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2405122328353830946-werk-batch-end" />
+    <None Include=".git\refs\tags\bak2406282238559850326-werk-batch-0" />
+    <None Include=".git\refs\tags\bak2406282238559850326-werk-batch-end" />
+    <None Include="App.config" />
+    <None Include="bash.exe.stackdump" />
+    <None Include="packages.config" />
+    <None Include="sh.exe.stackdump" />
+    <None Include="ssh.exe.stackdump" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cardinality.cs" />
+    <Compile Include="Family - Copy.cs" />
+    <Compile Include="family\Aggregate.cs" />
+    <Compile Include="family\aggregate_\Unite.cs" />
+    <Compile Include="family\BeI.cs" />
+    <Compile Include="family\be_\Field.cs" />
+    <Compile Include="family\be_\field\vow\ed_\Trivia.cs" />
+    <Compile Include="family\be_\field_\Sigmable.cs" />
+    <Compile Include="family\be_\Topo.cs" />
+    <Compile Include="family_\continuum_\borel\measure_\DiracDelta.cs" />
+    <Compile Include="family_\FieldI.cs" />
+    <Compile Include="family_\Generated.cs" />
+    <Compile Include="family_\IRing.cs" />
+    <Compile Include="family_\ITopology.cs" />
+    <Compile Include="family_\ring\be_\Sigmable.cs" />
+    <Compile Include="family_\ring_\doublet\IMeasure.cs" />
+    <Compile Include="family_\ring_\ISigma.cs" />
+    <Compile Include="family_\ring_\ISigmable.cs" />
+    <Compile Include="family_\ring_\nonsigma_\Eg.cs" />
+    <Compile Include="family_\ring_\PowSet.cs" />
+    <Compile Include="family_\ring_\Sigmable.cs" />
+    <Compile Include="family_\ring_\Sigmable_.cs" />
+    <Compile Include="family_\ring_\sigma\IMeasure.cs" />
+    <Compile Include="family_\ring_\sigma\measure\subspace\be_\FullSet.cs" />
+    <Compile Include="family_\ring_\sigma\measure\subspace\be_\NullSet.cs" />
+    <Compile Include="family_\ring_\sigma\_measure_\MeterI.cs" />
+    <Compile Include="family_\ring_\sigma\_measure_\SpaceI.cs" />
+    <Compile Include="family_\ring_\sigma_\ArbitraryUnionable.cs" />
+    <Compile Include="family_\ring_\sigma_\Comparable.cs" />
+    <Compile Include="family_\ring_\sigma_\dual_\PhiSingleton.cs" />
+    <Compile Include="family_\ring_\sigma_\Generated.cs" />
+    <Compile Include="family_\ring_\sigma_\generated_\OfOmega.cs" />
+    <Compile Include="family_\ring_\sigma_\NumerousPartition.cs" />
+    <Compile Include="family_\ring_\sigma_\OmegaComplement.cs" />
+    <Compile Include="family_\ring_\sigma_\OmegaComplementI.cs" />
+    <Compile Include="family_\ring_\sigma_\PowSet.cs" />
+    <Compile Include="family_\ring_\sigma_\singular\Measure.cs" />
+    <Compile Include="family_\ring_\sigma_\SomeComplement.cs" />
+    <Compile Include="family_\ring_\sigma_\Trivia.cs" />
+    <Compile Include="family_\ring_\TriviaOnOmega.cs" />
+    <Compile Include="family_\ring_\sigma\Measure.cs" />
+    <Compile Include="family_\ring_\sigma\MeasureI.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\AllNil.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\Positive.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\Singleton.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\SomeComplement.cs" />
+    <Compile Include="family_\topo\GeneratedSigma.cs" />
+    <Compile Include="family_\topo_\real_\OpenIntervalEs.cs" />
+    <Compile Include="family_\uncountable_\nontopo_\ClosedOverCountableOp.cs" />
+    <Compile Include="IFamily.cs" />
+    <Compile Include="IOrdinal.cs" />
+    <Compile Include="nilnul0\Collection.cs" />
+    <Compile Include="nilnul0\collection_\Continuum.cs" />
+    <Compile Include="nilnul0\collection_\continuum\hypothesis\be_\IIndependent.cs" />
+    <Compile Include="nilnul0\collection_\Finite.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\AllOpenIntervals.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\allOpenIntervals\minTopo\GeneratedSigma.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\allOpenIntervals\SmallestTopo.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\field_\sigma_\borel\Measure.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\field_\sigma_\borel\measure\Cumulus.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\field_\sigma_\borel\measure\cumulus\Inverse.cs" />
+    <Compile Include="nilnul0\collection_\real\family_\field_\sigma_\borel\measure_\nonemptyPositive\cumulus\Inverse.cs" />
+    <Compile Include="nilnul0\collection_\uncountable\subsets\vow_\Indiscrete.cs" />
+    <Compile Include="nilnul0\geometry\planar\curve_\algebraic_\bezier_\cubic\interpolate_\OnDistance.cs" />
+    <Compile Include="nilnul0\ICollection.cs" />
+    <Compile Include="nilnul0\collection_\discrete_\IInfinite.cs" />
+    <Compile Include="nilnul0\collection_\discrete_\INoninfinite.cs" />
+    <Compile Include="nilnul0\collection_\IContinuum.cs" />
+    <Compile Include="nilnul0\collection_\IDenumerous.cs" />
+    <Compile Include="nilnul0\collection_\IDiscrete.cs" />
+    <Compile Include="nilnul0\collection_\IFinite.cs" />
+    <Compile Include="nilnul0\collection_\IIndiscrete.cs" />
+    <Compile Include="nilnul0\collection_\IInfinite.cs" />
+    <Compile Include="nilnul0\collection_\inf\theorem_\ITarski.cs" />
+    <Compile Include="nilnul0\collection_\inf_\IContinuum.cs" />
+    <Compile Include="nilnul0\collection_\inf_\IDiscrete.cs" />
+    <Compile Include="nilnul0\num\quotient\clamp_\unial\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\num\real\clamp_\unial\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\num\real\interval_\full\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\set\family_\field_\ISigma.cs" />
+    <Compile Include="nilnul0\set\family_\field_\sigma\IMeasure.cs" />
+    <Compile Include="nilnul0\set\family_\field_\sigma\measure_\ILebesgue.cs" />
+    <Compile Include="nilnul0\set\family_\IField.cs" />
+    <Compile Include="nilnul0\set\IFamily.cs" />
+    <Compile Include="nilnul0\set\stream\ILimit.cs" />
+    <Compile Include="nilnul0\set\stream\ILimitInferior.cs" />
+    <Compile Include="nilnul0\set\stream\ILimitSuperior1.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\embed\measure\theorem_\IContinuity.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\IEmbed.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\INest.cs" />
+    <Compile Include="nilnul0\_collection_\by_\Builder.cs" />
+    <Compile Include="nilnul0\_collection_\ContainI.cs" />
+    <Compile Include="nilnul0\_collection_\IContainer.cs" />
+    <Compile Include="nilnul0\_collection_\IContent.cs" />
+    <Compile Include="ordinal_\IFinite.cs" />
+    <Compile Include="ordinal_\IInfinite.cs" />
+    <Compile Include="ordinal_\infinite_\geometry_\ITwoDimensional.cs" />
+    <Compile Include="ordinal_\infinite_\IContinuum.cs" />
+    <Compile Include="ordinal_\infinite_\ICountable.cs" />
+    <Compile Include="ordinal_\infinite_\IInteger.cs" />
+    <Compile Include="ordinal_\infinite_\IQuotient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".vs\nilnul._collection_._LIB_%28fx\v17\" />
+    <Folder Include="family\be_\field_\sigma\" />
+    <Folder Include="family_\real_\" />
+    <Folder Include="family_\ring_\ring_\" />
+    <Folder Include="family_\ring_\sigma\be_\" />
+    <Folder Include="family_\ring_\sigma\measure\be_\positive\anto\" />
+    <Folder Include="family_\ring_\sigma_\comparable\" />
+    <Folder Include="family_\ring_\sigma_\dual_\omegaComplement_\" />
+    <Folder Include="family_\ring_\sigma_\quad_\" />
+    <Folder Include="family_\ring_\singleton\" />
+    <Folder Include="nilnul0\collection_\continuum_\" />
+    <Folder Include="nilnul0\collection_\real\family_\field_\sigma_\borel_\partition_\equidistant_\prob\" />
+    <Folder Include="nilnul0\collection_\uncountable\subsets\be_\" />
+    <Folder Include="nilnul0\num\real\betwixt_\" />
+    <Folder Include="nilnul0\set\family\" />
+    <Folder Include="nilnul0\set_\lebesgue\stream_\embed\measure\be_\" />
+    <Folder Include="nilnul0\set_\lebesgue\stream_\nested\" />
+    <Folder Include="nilnul0\set_\measured\stream_\embed\" />
+    <Folder Include="nilnul0\set_\measured\stream_\nested\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+	$(PostBuildEventDependsOn);
+	PostBuildMacros;
+</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source nuget
+	)
+	if  $(ConfigurationName)==Fx (
+		"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)+fx
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source nuget
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+</Project>

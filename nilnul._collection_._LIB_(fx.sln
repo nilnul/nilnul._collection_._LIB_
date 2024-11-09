@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nilnul._collection_._LIB_(fx", "nilnul._collection_._LIB_(fx.csproj", "{269D97D6-EB9E-4D19-9CBF-98D8FE057816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nilnul.collection_._axiomatic_._LIB_", "..\..\nilnul.collection_._axiomatic_\_LIB_(Git\nilnul.collection_._axiomatic_._LIB_.csproj", "{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{D277E68A-664A-4F8A-A1D4-C604AE6045E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev2nuget|Any CPU = Dev2nuget|Any CPU
+		Nuget|Any CPU = Nuget|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Sym2nuget|Any CPU = Sym2nuget|Any CPU
+		Symbol|Any CPU = Symbol|Any CPU
+		Symbols4Debug|Any CPU = Symbols4Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Dev2nuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Dev2nuget|Any CPU.Build.0 = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Nuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Nuget|Any CPU.Build.0 = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Sym2nuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Sym2nuget|Any CPU.Build.0 = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Symbol|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Symbol|Any CPU.Build.0 = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Symbols4Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D97D6-EB9E-4D19-9CBF-98D8FE057816}.Symbols4Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Dev2nuget|Any CPU.ActiveCfg = Dev2nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Dev2nuget|Any CPU.Build.0 = Dev2nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Sym2nuget|Any CPU.ActiveCfg = Sym2nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Sym2nuget|Any CPU.Build.0 = Sym2nuget|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Symbol|Any CPU.ActiveCfg = Symbol|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Symbol|Any CPU.Build.0 = Symbol|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Symbols4Debug|Any CPU.ActiveCfg = Symbols4Debug|Any CPU
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0}.Symbols4Debug|Any CPU.Build.0 = Symbols4Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7ADBF1B5-E23A-497B-B42D-79C6B332FBC0} = {D277E68A-664A-4F8A-A1D4-C604AE6045E7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D66E1C19-74A9-41C9-A1DF-55A1841D190E}
+	EndGlobalSection
+EndGlobal
