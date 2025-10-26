@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.ring_.doublet
+namespace nilnul.collective.family_.ring_.doublet
 {
 	/// <summary>
 	/// μ(Φ)=0

@@ -1,4 +1,4 @@
-﻿namespace nilnul.collection.axiomatic.ordinal_.infinite_
+﻿namespace nilnul.collective.axiomatic.ordinal_.infinite_
 {
 	public interface IContinuum { }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.ring_.sigma_.singular
+namespace nilnul.collective.family_.ring_.sigma_.singular
 {
 	/// <summary>
 	/// 	μ(Φ)=0

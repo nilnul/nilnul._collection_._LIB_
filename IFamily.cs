@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace nilnul.collection
+namespace nilnul.collective
 {
 	/// <summary>
 	/// collection of collections;

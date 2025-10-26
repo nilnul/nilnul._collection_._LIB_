@@ -230,3 +230,25 @@ MigrationBackup/
 .*
 
 !.gitignore
+/nilnul0/collective_/countable_/IInfinite.cs
+
+*([Gg]it)*/
+*.vsmdi
+TemporaryGeneratedFile*
+/*.user
+!/*.user/
+/bin/[Dd]ebug/
+/[Dd]ebugPublic/
+/bin/[Rr]elease/
+/bin/[Rr]eleases/
+/[Bb]in/
+/[Oo]bj/
+/[Dd]ebugPS/
+/[Rr]eleasePS/
+/artifacts/
+!*.obj/
+/ipch/
+[Pp]ackages/
+*.refactorlog
+/*.snk
+/Backup*/

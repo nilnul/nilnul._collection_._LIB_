@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family.be_.field_
+namespace nilnul.collective.family.be_.field_
 {
 	/// <summary>
 	/// A family is called sigma-algebra if it's closed under { omega , complement, stream union }.

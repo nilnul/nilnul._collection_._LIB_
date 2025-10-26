@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.uncountable_.nontopo_
+namespace nilnul.collective.family_.uncountable_.nontopo_
 {
 	/// <summary>
 	/// Let X be an uncountable set. Also let τ = {O ⊆X∣ O = X or O is at most countable}

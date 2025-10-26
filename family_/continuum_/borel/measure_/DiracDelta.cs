@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.continuum_.borel.measure_
+namespace nilnul.collective.family_.continuum_.borel.measure_
 {
 	/// <summary>
 	/// +inf if x=0
@@ -13,7 +13,7 @@ namespace nilnul.collection.family_.continuum_.borel.measure_
 	/// <remarks>
 	/// This is the derivative of Heaviside Step Function
 	/// </remarks>
-	public class DiracDelta
+	class DiracDelta
 	{
 
 	}

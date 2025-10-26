@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.ring_
+namespace nilnul.collective.family_.ring_
 {
 	/// <summary>
 	/// this may be not denumerable

@@ -1,4 +1,4 @@
-﻿namespace nilnul.collection.axiomatic.ordinal_
+﻿namespace nilnul.collective.axiomatic.ordinal_
 {
 	public interface IInfinite { }
 

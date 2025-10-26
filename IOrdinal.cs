@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.axiomatic
+namespace nilnul.collective
 {
 	/// <summary>
 	/// when we digitize objects, the adjacency relation shall be kept.
@@ -13,7 +13,9 @@ namespace nilnul.collection.axiomatic
 	/// <remarks>
 	/// a mappting from one collection to another, keeping ordering relation be it 1-dimensional or n-dimensional;
 	/// </remarks>
-	public interface IOrdinal
+	interface IOrdinal
 	{
 	}
+
+
 }

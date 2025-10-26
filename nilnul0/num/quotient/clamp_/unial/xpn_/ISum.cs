@@ -5,7 +5,7 @@ using System.Text;
 namespace nilnul.num.quotient.clamp_.unial.xpn_
 {
 	/// <summary>
-	/// even for <see cref="collection_.IDenumerous"/>, the order of elements cannot be changed; (for finite one, we can have commutative rule;).
+	/// even for <see cref="collective_.IDenumerous"/>, the order of elements cannot be changed; (for finite one, we can have commutative rule;).
 	/// here we lack the order to make a <see cref="nilnul.obj.IStream"/>;
 	/// adding is not commutative for a stream. For associative, the terms cannot be grouped.
 	/// </summary>

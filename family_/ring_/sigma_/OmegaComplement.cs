@@ -1,4 +1,4 @@
-﻿using nilnul.collection.family_.ring_;
+﻿using nilnul.collective.family_.ring_;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.ring_.sigmable_
+namespace nilnul.collective.family_.ring_.sigmable_
 {
 	
 

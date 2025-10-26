@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.topo_.real_
+namespace nilnul.collective.family_.topo_.real_
 {
 	/// <summary>
 	///

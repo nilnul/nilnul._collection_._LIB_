@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family.be_
+namespace nilnul.collective.family.be_
 {
 	/// <summary>
 	/// a family of sets is a topology if the family is closed over :
@@ -18,6 +18,9 @@ namespace nilnul.collection.family.be_
 	/// member of top is also called open. and the complement of open set is called closed. a closed set might be member of the family, thus being both closed and open
 	/// 
 	/// </summary>
+	/// <remarks>
+	/// These conditions are very loose, and allow enormous flexibility in the choice of open sets. 
+	/// </remarks>
 	class Topo
 	{
 	}

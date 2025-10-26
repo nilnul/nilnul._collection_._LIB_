@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace nilnul.collection.family_.ring_
+namespace nilnul.collective.family_.ring_
 {
 
 	/// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace nilnul.collection.family_.ring_.sigma
+namespace nilnul.collective.family_.ring_.sigma
 {
 ///Suppose that X is a set and Σ is a σ-algebra over X. Then a measure μ is a function with domain Σ and codomain  (see extended interval) such that the following properties are satisfied:
 

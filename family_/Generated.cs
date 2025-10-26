@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_
+namespace nilnul.collective.family_
 {
 	/// <summary>
 	/// given Omega, define a family having each singleton of omega.

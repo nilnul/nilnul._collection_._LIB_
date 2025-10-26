@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family_.ring.be_
+namespace nilnul.collective.family_.ring.be_
 {
 	/// <summary>
 	///  a ring that is closed over countable union

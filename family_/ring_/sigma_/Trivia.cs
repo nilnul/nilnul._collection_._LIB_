@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection_.axiomic.family.sigmable_
+namespace nilnul.collective_.axiomic.family.sigmable_
 {
 	/// <summary>
 	/// this is the unique minimal (minimum) sigmable:

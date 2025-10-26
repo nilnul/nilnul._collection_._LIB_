@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection.family.be_
+namespace nilnul.collective.family.be_
 {
 	/// <summary>
 	/// a family ℱ is called Field of Sets or Algebra of Set if it is closed under the operation of: 
@@ -33,7 +33,7 @@ namespace nilnul.collection.family.be_
 	/// <typeparam name="TElement"></typeparam>
 	/// <typeparam name="TCollection"></typeparam>
 	public class FieldAlgebra<TElement, TCollection>
-		: nilnul.collection.family.BeI<TElement, TCollection>
+		: nilnul.collective.family.BeI<TElement, TCollection>
 		where TCollection : nilnul.CollectionI<TElement>
 	{
 		public bool be(FamilyI<TElement, TCollection> obj)

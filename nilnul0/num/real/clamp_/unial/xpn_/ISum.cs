@@ -6,7 +6,7 @@ namespace nilnul.num.real.clamp_.unial.xpn_
 {
 	/// <summary>
 	/// addd all the reals in [-1,1]; but add is only defined on discrete set of reals;
-	/// even for <see cref="collection_.IDenumerous"/>, the order of elements cannot be changed; (for finite one, we can have commutative rule;).
+	/// even for <see cref="collective_.IDenumerous"/>, the order of elements cannot be changed; (for finite one, we can have commutative rule;).
 	/// </summary>
 	/// <remarks>
 	/// for continuum, we can only define integration.

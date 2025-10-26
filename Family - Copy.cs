@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.collection
+namespace nilnul.collective
 {
 	/// <summary>
 	/// a collection of collection

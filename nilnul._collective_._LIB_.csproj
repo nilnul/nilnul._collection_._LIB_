@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Deterministic>false</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{269D97D6-EB9E-4D19-9CBF-98D8FE057816}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>nilnul._collective_._LIB__</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbol|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>nilnul.collective</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.250314.64704\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.250222.101628\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._stream_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._stream_._LIB_.1.0.250211.94435\lib\net48\nilnul.num.real._stream_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.241104.100014\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.250313.131820\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.250314.84841\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.250131.95404\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.250224.152829\lib\net48\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.241212.85916\lib\net48\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.241212.85916\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.250313.102236\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.250212.104800\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.250118.94723\lib\net48\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.250209.133640\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.250227.70442\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=9.0.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Collections.Immutable.9.0.3\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.241016.32119\lib\net48\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.241016.32253\lib\net48\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="App.config" />
+    <None Include="bash.exe.stackdump" />
+    <None Include="packages.config" />
+    <None Include="sh.exe.stackdump" />
+    <None Include="ssh.exe.stackdump" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bi_\IUnion.cs" />
+    <Compile Include="bi_\union\ICumulator.cs" />
+    <Compile Include="Cardinality.cs" />
+    <Compile Include="Family - Copy.cs" />
+    <Compile Include="family\IMember.cs" />
+    <Compile Include="family\be_\Covering.cs" />
+    <Compile Include="family\IOmega.cs" />
+    <Compile Include="family\IScala.cs" />
+    <Compile Include="family\scala_\IConjunction.cs" />
+    <Compile Include="family\BeI.cs" />
+    <Compile Include="family\be_\Field.cs" />
+    <Compile Include="family\be_\field\vow\ed_\Trivia.cs" />
+    <Compile Include="family\be_\field_\Sigmable.cs" />
+    <Compile Include="family\be_\Topo.cs" />
+    <Compile Include="family\scala_\IDisjunction.cs" />
+    <Compile Include="family\re_\ISubCover.cs" />
+    <Compile Include="family_\continuum_\borel\measure_\DiracDelta.cs" />
+    <Compile Include="family_\countable\scala_\IConjunction.cs" />
+    <Compile Include="family_\countable\scala_\IDisjunction.cs" />
+    <Compile Include="family_\dwelt\be_\Bornology.cs" />
+    <Compile Include="family_\FieldI.cs" />
+    <Compile Include="family_\Generated.cs" />
+    <Compile Include="family_\ICountable.cs" />
+    <Compile Include="family_\IRing.cs" />
+    <Compile Include="family_\ITopology.cs" />
+    <Compile Include="family_\ring\be_\Sigmable.cs" />
+    <Compile Include="family_\ring_\doublet\IMeasure.cs" />
+    <Compile Include="family_\ring_\ISigmable.cs" />
+    <Compile Include="family_\ring_\nonsigma_\Eg.cs" />
+    <Compile Include="family_\ring_\PowSet.cs" />
+    <Compile Include="family_\ring_\Sigmable.cs" />
+    <Compile Include="family_\ring_\Sigmable_.cs" />
+    <Compile Include="family_\ring_\sigma\el\co\discern\of_\dif_\Displace.cs" />
+    <Compile Include="family_\ring_\sigma\el\co\discern\of_\dif_\IMinus.cs" />
+    <Compile Include="family_\ring_\sigma\el\co\discern\of_\IDifference.cs" />
+    <Compile Include="family_\ring_\sigma\el\co\IDiscern.cs" />
+    <Compile Include="family_\ring_\sigma\el\co\_discern_\IUnit.cs" />
+    <Compile Include="family_\ring_\sigma\el\_gauge_\IAmount.cs" />
+    <Compile Include="family_\ring_\sigma\el\_gauge_\_unit_\IMagnitude.cs" />
+    <Compile Include="family_\ring_\sigma\IMeasure.cs" />
+    <Compile Include="family_\ring_\sigma\measure\subspace\be_\FullSet.cs" />
+    <Compile Include="family_\ring_\sigma\measure\subspace\be_\NullSet.cs" />
+    <Compile Include="family_\ring_\sigma\of_\Generate.cs" />
+    <Compile Include="family_\ring_\sigma\_measure_\MeterI.cs" />
+    <Compile Include="family_\ring_\sigma\_measure_\SpaceI.cs" />
+    <Compile Include="family_\ring_\sigma_\ArbitraryUnionable.cs" />
+    <Compile Include="family_\ring_\sigma_\Comparable.cs" />
+    <Compile Include="family_\ring_\sigma_\dual_\PhiSingleton.cs" />
+    <Compile Include="family_\ring_\sigma_\Generated.cs" />
+    <Compile Include="family_\ring_\sigma_\generated_\OfOmega.cs" />
+    <Compile Include="family_\ring_\sigma_\NumerousPartition.cs" />
+    <Compile Include="family_\ring_\sigma_\OmegaComplement.cs" />
+    <Compile Include="family_\ring_\sigma_\OmegaComplementI.cs" />
+    <Compile Include="family_\ring_\sigma_\PowSet.cs" />
+    <Compile Include="family_\ring_\sigma_\singular\Measure.cs" />
+    <Compile Include="family_\ring_\sigma_\SomeComplement.cs" />
+    <Compile Include="family_\ring_\sigma_\Trivia.cs" />
+    <Compile Include="family_\ring_\TriviaOnOmega.cs" />
+    <Compile Include="family_\ring_\sigma\Measure.cs" />
+    <Compile Include="family_\ring_\sigma\MeasureI.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\AllNil.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\Positive.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\Singleton.cs" />
+    <Compile Include="family_\ring_\sigma\measure_\SomeComplement.cs" />
+    <Compile Include="family_\topo\GeneratedSigma.cs" />
+    <Compile Include="family_\topo_\real_\OpenIntervalEs.cs" />
+    <Compile Include="family_\uncountable_\nontopo_\ClosedOverCountableOp.cs" />
+    <Compile Include="IBethNumber.cs" />
+    <Compile Include="IFamily.cs" />
+    <Compile Include="IMeasure.cs" />
+    <Compile Include="IOrdinal.cs" />
+    <Compile Include="measure\bi_\IDistance.cs" />
+    <Compile Include="nilnul0\collective_\continuum\hypothesis\be_\IIndependent.cs" />
+    <Compile Include="nilnul0\collective_\continuum_\ICantor.cs" />
+    <Compile Include="nilnul0\collective_\continuum_\IVitali.cs" />
+    <Compile Include="nilnul0\collective_\continuum_\IVitalis.cs" />
+    <Compile Include="nilnul0\collective_\countable\ILebesgueMeasure.cs" />
+    <Compile Include="nilnul0\collective_\Finite.cs" />
+    <Compile Include="nilnul0\collective_\finite_\IEmpty.cs" />
+    <Compile Include="nilnul0\collective_\IIn2real.cs" />
+    <Compile Include="nilnul0\collective_\IMeasurable.cs" />
+    <Compile Include="nilnul0\collective_\in2real_\IUncountable.cs" />
+    <Compile Include="nilnul0\collective_\in2real_\ICountable.cs" />
+    <Compile Include="nilnul0\collective_\inf\el\collectives\ICardinal.cs" />
+    <Compile Include="nilnul0\collective_\inf\el\fns\ICardinal.cs" />
+    <Compile Include="nilnul0\collective_\inf\el\vecs\ICardinal.cs" />
+    <Compile Include="nilnul0\collective_\inf\el\strs\ICardinal.cs" />
+    <Compile Include="nilnul0\collective_\inf\el\sets\ICardinal.cs" />
+    <Compile Include="nilnul0\collective_\IUncountable.cs" />
+    <Compile Include="nilnul0\collective_\measurable\IMeasure.cs" />
+    <Compile Include="nilnul0\collective_\measurable\measure\co\IDiscern.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\AllOpenIntervals.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\allOpenIntervals\minTopo\GeneratedSigma.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\allOpenIntervals\SmallestTopo.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\field_\sigma_\borel\Measure.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\field_\sigma_\borel\measure\Cumulus.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\field_\sigma_\borel\measure\cumulus\Inverse.cs" />
+    <Compile Include="nilnul0\collective_\continuum\family_\field_\sigma_\borel\measure_\nonemptyPositive\cumulus\Inverse.cs" />
+    <Compile Include="nilnul0\collective_\uncountable\subsets\vow_\Indiscrete.cs" />
+    <Compile Include="nilnul0\collective_\uncountable_\IBeth2nd.cs" />
+    <Compile Include="nilnul0\collective_\uncountable_\IContinuum.cs" />
+    <Compile Include="nilnul0\ICollection.cs" />
+    <Compile Include="nilnul0\collective_\countable_\IInfinite.cs" />
+    <Compile Include="nilnul0\collective_\countable_\IFinite.cs" />
+    <Compile Include="nilnul0\collective_\IContinuum.cs" />
+    <Compile Include="nilnul0\collective_\IDenumerous.cs" />
+    <Compile Include="nilnul0\collective_\ICountable.cs" />
+    <Compile Include="nilnul0\collective_\IFinite.cs" />
+    <Compile Include="nilnul0\collective_\IInfinite.cs" />
+    <Compile Include="nilnul0\collective_\inf\theorem_\ITarski.cs" />
+    <Compile Include="nilnul0\collective_\inf_\IContinuum.cs" />
+    <Compile Include="nilnul0\collective_\inf_\IDenumerable.cs" />
+    <Compile Include="nilnul0\NewFolder1\CollectionI.cs" />
+    <Compile Include="nilnul0\num\quotient\clamp_\unial\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\num\real\clamp_\unial\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\num\real\interval_\full\xpn_\ISum.cs" />
+    <Compile Include="nilnul0\num\real\set\measure_\ILebsgue.cs" />
+    <Compile Include="nilnul0\num\real\set\measure_\ITrivia.cs" />
+    <Compile Include="nilnul0\obj_\IDenumerable.cs" />
+    <Compile Include="nilnul0\obj_\IDiscrete.cs" />
+    <Compile Include="nilnul0\obj_\IInfinite.cs" />
+    <Compile Include="nilnul0\obj_\IUncountable.cs" />
+    <Compile Include="nilnul0\set\family_\field_\ISigma.cs" />
+    <Compile Include="nilnul0\set\family_\field_\sigma\IMeasure.cs" />
+    <Compile Include="nilnul0\set\family_\field_\sigma\measure_\ILebesgue.cs" />
+    <Compile Include="nilnul0\set\family_\IField.cs" />
+    <Compile Include="nilnul0\set\IFamily.cs" />
+    <Compile Include="nilnul0\set\stream\ILimit.cs" />
+    <Compile Include="nilnul0\set\stream\ILimitInferior.cs" />
+    <Compile Include="nilnul0\set\stream\ILimitSuperior1.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\embed\measure\theorem_\IContinuity.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\IEmbed.cs" />
+    <Compile Include="nilnul0\set_\lebesgue\stream_\INest.cs" />
+    <Compile Include="nilnul0\_collective_\by_\Builder.cs" />
+    <Compile Include="nilnul0\_collective_\ContainI.cs" />
+    <Compile Include="nilnul0\_collective_\Has%28T.cs" />
+    <Compile Include="nilnul0\_collective_\IContainer.cs" />
+    <Compile Include="nilnul0\_collective_\IContent.cs" />
+    <Compile Include="ordinal_\IFinite.cs" />
+    <Compile Include="ordinal_\IInfinite.cs" />
+    <Compile Include="ordinal_\infinite_\geometry_\ITwoDimensional.cs" />
+    <Compile Include="ordinal_\infinite_\IContinuum.cs" />
+    <Compile Include="ordinal_\infinite_\ICountable.cs" />
+    <Compile Include="ordinal_\infinite_\IInteger.cs" />
+    <Compile Include="ordinal_\infinite_\IQuotient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stream\cumulus_\IUnion.cs" />
+    <Compile Include="stream\Disjunct.cs" />
+    <Compile Include="stream_\nonshrink\ILimit.cs" />
+    <Compile Include="stream\ISeries.cs" />
+    <Compile Include="stream\serie\ILimit.cs" />
+    <Compile Include="xpn_\IAlephNumber.cs" />
+    <Compile Include="xpn_\IDiscern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="abgebra_\cobiop_\" />
+    <Folder Include="abgebra_\eg_\" />
+    <Folder Include="els\" />
+    <Folder Include="family\be_\field_\sigma\" />
+    <Folder Include="family\sub\be_\" />
+    <Folder Include="family\sub_\cover\" />
+    <Folder Include="family_\countable\to_\" />
+    <Folder Include="family_\ring_\sigma\be_\" />
+    <Folder Include="family_\ring_\sigma\measure\be_\positive\anto\" />
+    <Folder Include="family_\ring_\sigma_\comparable\" />
+    <Folder Include="family_\ring_\sigma_\dual_\omegaComplement_\" />
+    <Folder Include="family_\ring_\sigma_\quad_\" />
+    <Folder Include="family_\ring_\singleton\" />
+    <Folder Include="nilnul0\collective_\continuum\family_\field_\sigma_\borel_\partition_\equidistant_\prob\" />
+    <Folder Include="nilnul0\collective_\denum\el\sets\" />
+    <Folder Include="nilnul0\collective_\inf\subs_\finite\" />
+    <Folder Include="nilnul0\collective_\uncountable\subsets\be_\" />
+    <Folder Include="nilnul0\geometry\planar\curve_\algebraic_\bezier_\cubic\" />
+    <Folder Include="nilnul0\num\real\betwixt_\" />
+    <Folder Include="nilnul0\num\real\co\" />
+    <Folder Include="nilnul0\set\family\" />
+    <Folder Include="nilnul0\set_\lebesgue\stream_\embed\measure\be_\" />
+    <Folder Include="nilnul0\set_\lebesgue\stream_\nested\" />
+    <Folder Include="nilnul0\set_\measured\stream_\embed\" />
+    <Folder Include="nilnul0\set_\measured\stream_\nested\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+	$(PostBuildEventDependsOn);
+	PostBuildMacros;
+</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source nuget
+	)
+	if  $(ConfigurationName)==Fx (
+		"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)+fx
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)+fx.nupkg -SkipDuplicate -Source nuget
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+</Project>
